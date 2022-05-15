@@ -11,6 +11,9 @@ docker version
 # Shows containers in execution
 docker container ls
 
+# Shows containers images
+docker image ls
+
 # Kill an running container
 docker container rm -f CONTAINER_ID
 
@@ -80,3 +83,14 @@ docker container update --cpus 0.2 CONTAINER_ID
 ```bash
 docker container run hello-world
 ```
+
+## Dockerimage
+
+```bash
+# To build docker image
+docker image build -t IMAGE_NAME:IMAGE_VERSION DOCKER_IMAGE_PATH
+```
+
+
+
+
