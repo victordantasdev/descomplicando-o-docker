@@ -91,6 +91,29 @@ docker container run hello-world
 docker image build -t IMAGE_NAME:IMAGE_VERSION DOCKER_IMAGE_PATH
 ```
 
+## Volumes
+
+```bash
+# To mount an volume of type bind in container
+docker container run -ti --mount type=bind,src=PATH_IN_YOUR_MACHINE,dst=PATH_ON_CONTAINER debian
+
+
+# To mount an volume of type bind in container (read only)
+docker container run -ti --mount type=bind,src=PATH_IN_YOUR_MACHINE,dst=PATH_ON_CONTAINER,ro debian
+
+# To list all volumes
+docker volume ls
+
+# To create a volume
+docker volume create VOLUME_NAME
+
+# To inspect some volume
+docker volume inspect VOLUME_NAME 
+
+# To mount an volume of type volume in container
+docker container run -ti --mount type=volume,src=VOLUME_NAME,dst=PATH_ON_CONTAINER debian
+```
+
 
 
 
