@@ -11,6 +11,12 @@ docker version
 # Shows containers in execution
 docker container ls
 
+# Kill an running container
+docker container rm -f CONTAINER_ID
+
+# Remove an container
+docker container rm CONTAINER_ID
+
 # Shows all containers
 docker container ls -a
 
@@ -30,14 +36,26 @@ docker container -d nginx
 # Connect to an running container as daemon
 docker container exec -ti CONTAINER_ID bash
 
-# Stop an container
+# To stop an container
 docker container stop CONTAINER_ID
 
-# Start an container
+# To start an container
 docker container start CONTAINER_ID
 
-# Restart an container
+# To restart an container
 docker container restart CONTAINER_ID
+
+# To pause an container
+docker container pause CONTAINER_ID
+
+# To unpause an container
+docker container unpause CONTAINER_ID
+
+# To get infos about an container
+docker container inspect CONTAINER_ID
+
+# To get container logs
+docker container logs -f CONTAINER_ID
 ```
 
 ## Example:
