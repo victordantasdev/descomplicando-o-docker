@@ -56,6 +56,23 @@ docker container inspect CONTAINER_ID
 
 # To get container logs
 docker container logs -f CONTAINER_ID
+
+# To get container stats
+docker container stats CONTAINER_ID
+docker container top CONTAINER_ID
+```
+
+## Control container resources
+
+```bash
+# To limit memory
+docker container run -d -m 128M nginx
+
+# To limit cpu
+docker container run -d --cpus 0.5 nginx
+
+# To update container usage
+docker container update --cpus 0.2 CONTAINER_ID
 ```
 
 ## Example:
