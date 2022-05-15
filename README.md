@@ -9,8 +9,5 @@
 docker version 
 
 # shows processes
-docker ps
-
-# shows installed containers
 docker container ls
 ```
